@@ -22,7 +22,7 @@
                 </div>
                 <div class="col-md-6 mb-sm">
                     <div class="input-group  input-light mb-3">
-                        <input wire:model.defer="phone" type="text" class="form-control" placeholder="Tu numero de Whatsapp">
+                        <input wire:model.defer="telephone" type="text" class="form-control" placeholder="Tu numero de Whatsapp">
                     </div>
                 </div>
                 <div class="col-md-6 mb-sm">

@@ -16,15 +16,14 @@ class Tenant extends ModelsTenant
 
     public static function booted(){
         static::creating(fn (Tenant $tenant) => $tenant->createDataBase($tenant));
-        static::created(fn (Tenant $tenant) => $tenant->createDataBase($tenant));
-    }
-
-    public function migration($tenant){
-        $this->createDataBase($tenant);
+        static::created(fn (Tenant $tenant) => $tenant->runMigrationsSeeds($tenant));
     }
 
     public function createDataBase($tenant){
-        $database_name = parse_url(config('app.url'),PHP_URL_HOST).'_'.Str::random(4);
+        list($sub,$dom,$ext) = explode('.',$tenant->domain);
+        
+        $database_name = $dom.'_'.$sub;
+
         $database = Str::of($database_name)->replace('.','_')->lower()->__toString();
 
         $query = "SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME = ?";

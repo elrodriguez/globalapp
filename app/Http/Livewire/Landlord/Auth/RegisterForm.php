@@ -66,8 +66,6 @@ class RegisterForm extends Component
 
         $token = $this->createToken($tenant,auth()->user(),$redirect_url);
 
-        //return redirect($redirect_url, 301);
-
         $this->impersonate($tenant,$token->token,auth()->user());
             
         $tenant_url = "http://{$tenant->domain}/admin/impersonate";

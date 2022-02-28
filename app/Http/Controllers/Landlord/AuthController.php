@@ -10,4 +10,8 @@ class AuthController extends Controller
     public function register(){
         return view('landlord.auth.register');
     }
+
+    public function login(){
+        return view('landlord.auth.login');
+    }
 }

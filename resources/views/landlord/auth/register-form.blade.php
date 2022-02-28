@@ -1,7 +1,7 @@
 <div class="sign2">
     <div class="section-left">
     </div>
-    <div class="form-holder signup-2 px-xxl" data-perfect-scrollbar='' data-suppress-scroll-x='true' ">
+    <div class="form-holder signup-2 px-xxl" data-perfect-scrollbar='' data-suppress-scroll-x='true' >
         <form class="signup-form">
             <div class="mb-xxl signin-right-image">
                 <img class="card-img-top signup" src="{{ asset('theme/images/logo.png') }}" style="width: 300px; text-align: center;" alt="Card image cap">

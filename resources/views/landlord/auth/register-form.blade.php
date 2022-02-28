@@ -41,15 +41,7 @@
                 <label class="custom-control-label" for="customCheck2">Estoy de acuerdo con los términos y condiciones</label>
             </div>
             <button wire:click="save" type="button" class="btn btn-raised btn-raised-primary btn-block">Registrarme</button>
-            <div class="border-bottom mt-xxl mb-lg"></div>
-            <div class="text-center">
-                <p>Registrarte con</p>
-            </div>
-            <div class="d-flex justify-content-center">
-                <button class="btn btn-google btn-outline mx-xs"><i class="fab fa-google"></i>Google</button>
-                <button class="btn btn-outline btn-facebook mx-xs"><i class="fab fa-facebook-f"></i>Facebook</button>
-                <button class="btn btn-twitter btn-outline mx-xs"><i class="fab fa-twitter"></i>Twitter</button>
-            </div>
+            
         </form>
     </div>
 </div>

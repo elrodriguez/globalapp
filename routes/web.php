@@ -30,7 +30,7 @@ Route::get('/admin/impersonate/{token}', function ($token) {
 })->name('redirect_domain');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/admin', function () {
-    return 'Llegaste al dashboard';
+    return view('tenant.auth.dashboard');
 })->name('admin');
 
 Route::get('login', function () {
